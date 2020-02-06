@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -g  -rdynamic CMakeFiles/random_static_test.dir/random_test.cpp.o  -o random_static_test -lpthread 
