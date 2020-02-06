@@ -56,16 +56,17 @@ CMAKE_BINARY_DIR = /home/krasno/CLionProjects/Starfield-SDL2/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/krasno/Apps/clion-2019.3.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/krasno/Apps/clion-2019.3.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/krasno/Apps/clion-2019.3.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -77,6 +78,51 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/krasno/Apps/clion-2019.3.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/krasno/Apps/clion-2019.3.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/krasno/Apps/clion-2019.3.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/krasno/Apps/clion-2019.3.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/krasno/Apps/clion-2019.3.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,6 +168,45 @@ Starfield_SDL2: cmake_check_build_system
 Starfield_SDL2/fast:
 	$(MAKE) -f CMakeFiles/Starfield_SDL2.dir/build.make CMakeFiles/Starfield_SDL2.dir/build
 .PHONY : Starfield_SDL2/fast
+
+#=============================================================================
+# Target rules for targets named random_thread_local_test
+
+# Build rule for target.
+random_thread_local_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 random_thread_local_test
+.PHONY : random_thread_local_test
+
+# fast build rule for target.
+random_thread_local_test/fast:
+	$(MAKE) -f external/random/test/CMakeFiles/random_thread_local_test.dir/build.make external/random/test/CMakeFiles/random_thread_local_test.dir/build
+.PHONY : random_thread_local_test/fast
+
+#=============================================================================
+# Target rules for targets named random_local_test
+
+# Build rule for target.
+random_local_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 random_local_test
+.PHONY : random_local_test
+
+# fast build rule for target.
+random_local_test/fast:
+	$(MAKE) -f external/random/test/CMakeFiles/random_local_test.dir/build.make external/random/test/CMakeFiles/random_local_test.dir/build
+.PHONY : random_local_test/fast
+
+#=============================================================================
+# Target rules for targets named random_static_test
+
+# Build rule for target.
+random_static_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 random_static_test
+.PHONY : random_static_test
+
+# fast build rule for target.
+random_static_test/fast:
+	$(MAKE) -f external/random/test/CMakeFiles/random_static_test.dir/build.make external/random/test/CMakeFiles/random_static_test.dir/build
+.PHONY : random_static_test/fast
 
 Star.o: Star.cpp.o
 
@@ -183,9 +268,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... Starfield_SDL2"
+	@echo "... install/strip"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... Starfield_SDL2"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install/local"
+	@echo "... random_thread_local_test"
+	@echo "... random_local_test"
+	@echo "... random_static_test"
 	@echo "... Star.o"
 	@echo "... Star.i"
 	@echo "... Star.s"

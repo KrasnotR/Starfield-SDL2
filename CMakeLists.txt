@@ -15,5 +15,5 @@ find_package(SDL2 REQUIRED)
 add_subdirectory(external/random)
 include_directories(${SDL2_INCLUDE_DIRS})
 
-add_executable(${PROJECT_NAME} main.cpp Star.cpp Star.hpp)
+add_executable(${PROJECT_NAME} main.cpp Star.cpp Star.hpp utils.hpp)
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES} effolkronium_random)

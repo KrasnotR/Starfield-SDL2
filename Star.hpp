@@ -15,9 +15,12 @@ public:
     float z;
     float pZ;
 
+    int* sWidth;
+    int* sHeight;
+
 public:
-    Star();
-    void update(double deltaTime);
+    Star(int* width, int* height);
+    void update(double deltaTime, float speed);
     void draw(SDL_Renderer *pRenderer);
 };
 

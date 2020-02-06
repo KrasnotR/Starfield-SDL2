@@ -2,6 +2,9 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="Starfield_SDL2" targetName="random_static_test" />
+      <config projectName="Starfield_SDL2" targetName="random_thread_local_test" />
+      <config projectName="Starfield_SDL2" targetName="random_local_test" />
       <config projectName="Starfield_SDL2" targetName="Starfield_SDL2" />
     </generated>
   </component>
@@ -11,7 +14,35 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9826297a-53c7-4ca7-a72b-d9b1fbb35dfe" name="Default Changelist" comment="" />
+    <list default="true" id="9826297a-53c7-4ca7-a72b-d9b1fbb35dfe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/external/random" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Star.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Star.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Star.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Star.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Starfield_SDL2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Starfield_SDL2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Starfield_SDL2.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Starfield_SDL2.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,10 +52,14 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="tKhTmOEe" />
   </component>
   <component name="ProjectId" id="1XPbVSt0ObNiUMaJbNG57A6NSUC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -32,15 +67,43 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="CMake Application.Starfield_SDL2">
     <configuration name="Starfield_SDL2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Starfield_SDL2" TARGET_NAME="Starfield_SDL2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Starfield_SDL2" RUN_TARGET_NAME="Starfield_SDL2">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="random_local_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Starfield_SDL2" TARGET_NAME="random_local_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Starfield_SDL2" RUN_TARGET_NAME="random_local_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="random_static_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Starfield_SDL2" TARGET_NAME="random_static_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Starfield_SDL2" RUN_TARGET_NAME="random_static_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="random_thread_local_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Starfield_SDL2" TARGET_NAME="random_thread_local_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Starfield_SDL2" RUN_TARGET_NAME="random_thread_local_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Starfield_SDL2" />
+      <item itemvalue="CMake Application.random_local_test" />
+      <item itemvalue="CMake Application.random_static_test" />
+      <item itemvalue="CMake Application.random_thread_local_test" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -64,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580950701116</updated>
-      <workItem from="1580950713795" duration="1290000" />
+      <workItem from="1580950713795" duration="4657000" />
     </task>
     <servers />
   </component>
@@ -72,30 +135,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1320" height="170" key="GridCell.Tab.0.bottom" timestamp="1580951706295">
+    <state x="284" y="27" key="CommitChangelistDialog2" timestamp="1580955456072">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="170" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580951706295" />
-    <state width="1320" height="170" key="GridCell.Tab.0.center" timestamp="1580951706294">
+    <state x="284" y="27" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1580955456072" />
+    <state width="1320" height="160" key="GridCell.Tab.0.bottom" timestamp="1580955387381">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="170" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580951706294" />
-    <state width="1320" height="170" key="GridCell.Tab.0.left" timestamp="1580951706293">
+    <state width="1320" height="160" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580955387381" />
+    <state width="1320" height="160" key="GridCell.Tab.0.center" timestamp="1580955387380">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="170" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580951706293" />
-    <state width="1320" height="170" key="GridCell.Tab.0.right" timestamp="1580951706295">
+    <state width="1320" height="160" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580955387380" />
+    <state width="1320" height="160" key="GridCell.Tab.0.left" timestamp="1580955387376">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="170" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580951706295" />
+    <state width="1320" height="160" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580955387376" />
+    <state width="1320" height="160" key="GridCell.Tab.0.right" timestamp="1580955387380">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="160" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580955387380" />
     <state x="362" y="223" key="com.intellij.ide.util.TipDialog" timestamp="1580950713474">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="362" y="223" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1580950713474" />
-    <state x="346" y="176" key="run.anything.popup" timestamp="1580951570548">
+    <state x="346" y="176" key="run.anything.popup" timestamp="1580953086234">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="176" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1580951570548" />
+    <state x="346" y="176" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1580953086234" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1580950778840">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

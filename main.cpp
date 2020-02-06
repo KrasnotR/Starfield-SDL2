@@ -1,10 +1,18 @@
 #include <iostream>
 #include <SDL2/SDL.h>
+#include <vector>
+#include "Star.hpp"
 
-#define SCREEN_WIDTH 800
-#define SCREEN_HEIGHT 600
+int SCREEN_WIDTH = 800;
+int SCREEN_HEIGHT = 600;
 
 bool playing = true;
+
+Uint64 NOW = SDL_GetPerformanceCounter();
+Uint64 LAST = 0;
+double deltaTime = 0;
+
+std::vector<Star*> stars;
 
 void update(SDL_Event& pEvent, SDL_Window& pWindow, SDL_Renderer *pRenderer);
 void processEvents(SDL_Event& pEvent, SDL_Window& pWindow);
@@ -24,7 +32,25 @@ int main() {
             SCREEN_WIDTH, SCREEN_HEIGHT, 0);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
+    for (int i = 0; i < 800; i++) {
+        stars.push_back(new Star(&SCREEN_WIDTH, &SCREEN_HEIGHT));
+    }
+
+    SDL_Rect* r = new SDL_Rect();
+    SDL_RenderGetViewport(renderer, r);
+    std::cout << r->x << "|" <<  r->y << "|" << r->w << "|" << r->h << std::endl;
+    r->x = r->w / 2;
+    r->y = r->h / 2;
+    //SDL_RenderSetViewport(renderer, r);
+    SDL_RenderGetViewport(renderer, r);
+    std::cout << r->x << "|" <<  r->y << "|" << r->w << "|" << r->h << std::endl;
+
     while (playing) {
+        LAST = NOW;
+        NOW = SDL_GetPerformanceCounter();
+
+        deltaTime = ((double)(NOW - LAST)*1000 / (double)SDL_GetPerformanceFrequency()) * 0.001;
+
         update(event, *window, renderer);
 
         SDL_RenderPresent(renderer);
@@ -42,7 +68,13 @@ void update(SDL_Event& pEvent, SDL_Window& pWindow, SDL_Renderer *pRenderer) {
     processEvents(pEvent, pWindow);
     controls(pRenderer);
 
+    SDL_SetRenderDrawColor(pRenderer, 0, 0, 0, 255);
+    SDL_RenderClear(pRenderer);
 
+    for (auto & star : stars) {
+        star->update(deltaTime, 100);
+        star->draw(pRenderer);
+    }
 }
 
 void processEvents(SDL_Event& pEvent, SDL_Window& pWindow) {

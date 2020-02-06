@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -Wextra -g   -std=gnu++2a
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL2 
+CXX_INCLUDES = -I/usr/include/SDL2 -I/home/krasno/CLionProjects/Starfield-SDL2/external/random/include 
 
