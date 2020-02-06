@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -g   CMakeFiles/Starfield_SDL2.dir/main.cpp.o CMakeFiles/Starfield_SDL2.dir/Star.cpp.o  -o Starfield_SDL2 -lSDL2 -leffolkronium_random 

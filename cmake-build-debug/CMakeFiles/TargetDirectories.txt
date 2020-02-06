@@ -1,0 +1,3 @@
+/home/krasno/CLionProjects/Starfield-SDL2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/krasno/CLionProjects/Starfield-SDL2/cmake-build-debug/CMakeFiles/Starfield_SDL2.dir
+/home/krasno/CLionProjects/Starfield-SDL2/cmake-build-debug/CMakeFiles/edit_cache.dir

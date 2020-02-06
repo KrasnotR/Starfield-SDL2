@@ -1,0 +1,8 @@
+/home/krasno/Apps/clion-2019.3.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/krasno/CLionProjects/Starfield-SDL2
+CMake Error at CMakeLists.txt:15 (add_subdirectory):
+  add_subdirectory given source "external/random" which is not an existing
+  directory.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/krasno/CLionProjects/Starfield-SDL2/cmake-build-debug/CMakeFiles/CMakeOutput.log".
